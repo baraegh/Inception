@@ -1,2 +1,2 @@
 # Inception
-This project aims to broaden your knowledge of system administration by using Docker.
+Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, MariaDB and PHP) using Docker / Docker-Compose under specific rules.

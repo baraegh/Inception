@@ -1,6 +1,8 @@
 # Inception
 Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, MariaDB and PHP) using Docker / Docker-Compose under specific rules.
 
+<img width="697" alt="Screen Shot 2022-12-13 at 2 51 07 AM" src="https://user-images.githubusercontent.com/46541419/207206454-724fbb86-7285-4893-b70c-537f37d81d71.png">
+
 ## ressources
 - [Docker docs](https://docs.docker.com/desktop/)
 - [Getting started with docker, the step by step tutorial](https://www.youtube.com/watch?v=Vyp5_F42NGs&t=1s)

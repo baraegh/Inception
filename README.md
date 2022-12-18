@@ -18,3 +18,4 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [TLS Basics](https://www.internetsociety.org/deploy360/tls/basics/)
 - [What Is An Ssl/Tls Certificate?](https://aws.amazon.com/what-is/ssl-certificate/?nc1=h_ls)
 - [Compare TLS 1.3 and TLS 1.2 Certificates: Which is Stronger?](https://www.venafi.com/blog/why-tls-13-radically-different-tls-12#:~:text=As%20part%20of%20the%20SSL,weaknesses%20that%20had%20security%20vulnerabilities.)
+- [How To Create a Self-Signed SSL Certificate for Nginx in Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04)

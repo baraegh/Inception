@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  mariadb:
+    build: ./requirements/mariadb/
+    image: mariadb
+    container_name: mariadb
+    volumes:
+      - mariadb:/var/lib/mysql
+    networks:
+      - the-net
+
+  wordpress:
+    depends_on: 
+      - mariadb
+    build: ./requirements/wordpress
+    image: wordpress
+    container_name: wordpress
+    volumes:
+      - wordpress:/var/www/html/wordpress
+    ports:
+      - 9000:9000
+    networks:
+      - the-net
+
+  nginx:
+    depends_on:
+      - wordpress
+    build: ./requirements/nginx/
+    image: nginx
+    container_name: nginx
+    ports:
+      - 443:443
+    volumes:
+      - wordpress:/var/www/html/
+    networks:
+      - the-net
+
+volumes:
+  mariadb:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/eel-ghan/data/db
+  
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/eel-ghan/data/wp
+
+networks:
+  the-net:
+    driver : bridge

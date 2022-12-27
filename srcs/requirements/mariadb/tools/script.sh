@@ -2,10 +2,10 @@
 service mysql start
 
 # Creating a Database and User for WordPress
-mariadb -e "CREATE DATABASE mariadb DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+mysql -u root -e "CREATE DATABASE mariadb;"
 
-mariadb -e "GRANT ALL ON mariadb.* TO 'barae'@'%' IDENTIFIED BY '1234';"
+mysql -u root -e "GRANT ALL ON mariadb.* TO 'barae'@'%' IDENTIFIED BY '1234';"
 
-mariadb -e "FLUSH PRIVILEGES;"
+mysql -u root  -e "FLUSH PRIVILEGES;"
 
-# history -c
+# service mysql stop    

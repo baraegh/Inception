@@ -13,13 +13,13 @@ services:
   wordpress:
     depends_on: 
       - mariadb
-    build: ./requirements/wordpress
+    build: ./requirements/wordpress/
     image: wordpress
     container_name: wordpress
     volumes:
       - wordpress:/var/www/html/wordpress
-    ports:
-      - 9000:9000
+    # ports:
+    #   - 9000:9000
     networks:
       - the-net
 
@@ -32,7 +32,7 @@ services:
     ports:
       - 443:443
     volumes:
-      - wordpress:/var/www/html/
+      - wordpress:/var/www/html/wordpress
     networks:
       - the-net
 
@@ -42,14 +42,14 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/eel-ghan/data/db
+      device: ${PWD}/data/db
   
   wordpress:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/eel-ghan/data/wp
+      device: ${PWD}/data/wp
 
 networks:
   the-net:

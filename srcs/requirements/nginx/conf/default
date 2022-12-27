@@ -6,7 +6,7 @@ server {
     ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
     ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
 
-    root /var/www/html;
+    root /var/www/html/wordpress;
 
     index   index.html index.nginx-debian.html;
 
@@ -14,10 +14,11 @@ server {
 
     location / {
         try_files $uri $uri/ =404;
+
     }
 
-#    location ~ \.php$ {
-#        include snippets/fastcgi-php.conf;
-#        fastcgi wordpress:9000;
-#    }
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass wordpress:9000;
+    }
 }

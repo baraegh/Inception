@@ -2,7 +2,7 @@ FROM debian:buster
 
 RUN apt-get update 
 
-RUN apt-get install -y php-fpm curl php-mysql
+RUN apt-get install -y php7.3-fpm curl php7.3-mysql
 
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
@@ -26,4 +26,6 @@ RUN chmod +x script.sh
 
 # ENTRYPOINT [ "./script.sh" ]
 
-CMD ["tail", "-f"]
+# CMD ["php-fpm7.3", "-F", "-R"]
+
+CMD [ "./script.sh" ]

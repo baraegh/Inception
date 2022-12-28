@@ -10,4 +10,4 @@ RUN chmod +x script.sh
 
 RUN ./script.sh
 
-CMD ["mysqld_safe"]
+CMD ["mysqld"]

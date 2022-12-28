@@ -8,17 +8,16 @@ server {
 
     root /var/www/html/wordpress;
 
-    index   index.html index.nginx-debian.html;
+    index   index.html index.php;
 
     server_name _;
 
     location / {
         try_files $uri $uri/ =404;
-
     }
 
     location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass wordpress:9000;
-    }
+            include snippets/fastcgi-php.conf;
+            fastcgi_pass wordpress:9000;
+        }
 }

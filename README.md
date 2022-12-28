@@ -23,3 +23,5 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [How To Create a Self-Signed SSL Certificate for Nginx in Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04)
 - [Install WordPress with Nginx on Ubuntu](https://www.digitalocean.com/community/tutorials/install-wordpress-nginx-ubuntu#install-wordpress-with-nginx-on-ubuntu)
 - [How To Make a Website With WordPress](https://www.youtube.com/watch?v=O79pJ7qXwoE)
+- [Install WordPress WP-CLI (wordpress command line)](https://blog.sucuri.net/2022/11/wp-cli-how-to-install-wordpress-via-ssh.html#create-directory)
+- [What's mariadb ?](https://www.techtarget.com/searchdatamanagement/definition/MariaDB)

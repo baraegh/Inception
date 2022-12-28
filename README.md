@@ -25,3 +25,4 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [How To Make a Website With WordPress](https://www.youtube.com/watch?v=O79pJ7qXwoE)
 - [Install WordPress WP-CLI (wordpress command line)](https://blog.sucuri.net/2022/11/wp-cli-how-to-install-wordpress-via-ssh.html#create-directory)
 - [What's mariadb ?](https://www.techtarget.com/searchdatamanagement/definition/MariaDB)
+- [php-fpm: PHP FastCGI Process Manager](https://rm-rf.medium.com/an-introduction-to-php-fpm-tuning-c422f0f26418)

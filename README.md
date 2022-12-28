@@ -10,6 +10,8 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [Dockerfile Tutorial by Example II - Best practices](https://www.youtube.com/watch?v=ZcMr4G5DH7c&t=2s)
 - [Docker compose tutorial by example](https://www.youtube.com/watch?v=4EqysCR3mjo&list=PLX0Ak4vUBQfC6S8egys9kx6uy6tpw5yDX&index=28)
 - [Docker Networking Crash Course](https://www.youtube.com/watch?v=OU6xOM0SE4o)
+- [Docker networking II](https://www.youtube.com/watch?v=bKFMS5C4CG0&t=1073s)
+- [docker volumes](https://docs.docker.com/storage/volumes/)
 - [The NGINX Crash Course](https://www.youtube.com/watch?v=OU6xOM0SE4o)
 - [What is Nginx? Understanding the basics of Nginx](https://medium.com/devopscurry/what-is-nginx-understanding-the-basics-of-nginx-in-2021-f8ee0f3d3d54)
 - [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
@@ -20,3 +22,4 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [Compare TLS 1.3 and TLS 1.2 Certificates: Which is Stronger?](https://www.venafi.com/blog/why-tls-13-radically-different-tls-12#:~:text=As%20part%20of%20the%20SSL,weaknesses%20that%20had%20security%20vulnerabilities.)
 - [How To Create a Self-Signed SSL Certificate for Nginx in Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04)
 - [Install WordPress with Nginx on Ubuntu](https://www.digitalocean.com/community/tutorials/install-wordpress-nginx-ubuntu#install-wordpress-with-nginx-on-ubuntu)
+- [How To Make a Website With WordPress](https://www.youtube.com/watch?v=O79pJ7qXwoE)

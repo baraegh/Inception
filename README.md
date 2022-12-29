@@ -26,3 +26,4 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [Install WordPress WP-CLI (wordpress command line)](https://blog.sucuri.net/2022/11/wp-cli-how-to-install-wordpress-via-ssh.html#create-directory)
 - [What's mariadb ?](https://www.techtarget.com/searchdatamanagement/definition/MariaDB)
 - [php-fpm: PHP FastCGI Process Manager](https://rm-rf.medium.com/an-introduction-to-php-fpm-tuning-c422f0f26418)
+- [ PID 1 and the best practices for writing Dockerfiles](https://www.padok.fr/en/blog/docker-processes-container)

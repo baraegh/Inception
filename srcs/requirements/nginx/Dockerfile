@@ -12,6 +12,4 @@ COPY ./tools/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
 
 COPY ./conf/default /etc/nginx/sites-available/default
 
-RUN rm -rf /var/www/html/index.nginx-debian.html
-
 CMD [ "nginx" , "-g", "daemon off;"]

@@ -12,16 +12,20 @@ RUN mv wp-cli.phar /usr/local/bin/wp
 
 WORKDIR /var/www/html/wordpress/
 
+RUN chown -R www-data:www-data /var/www/html/wordpress
+
 RUN wp core download --allow-root
 
-RUN wp core config --dbname='mariadb' --dbuser='barae' --dbpass='1234' --dbhost='mariadb' --path='/var/www/html/wordpress' --allow-root --skip-check
+ARG DB_NAME DB_USER DB_PASS
+
+RUN wp core config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=$DB_NAME --path='/var/www/html/wordpress' --allow-root --skip-check
 
 COPY ./tools/script.sh .
 
-RUN chmod 777 script.sh
+RUN chmod +x script.sh
 
-RUN chown -R www-data:www-data /var/www/html/wordpress
+ENV WP_URL WP_TITLE WP_ADMIN_USER WP_ADMIN_PASS WP_ADMIN_EMAIL WP_USER WP_USER_EMAIL WP_USER_PASS
 
-# RUN ./script.sh
+ENTRYPOINT [ "./script.sh" ]
 
-CMD ["./script.sh"]
+CMD [ "php-fpm7.3", "-F", "-R" ]

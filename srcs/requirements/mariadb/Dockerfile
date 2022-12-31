@@ -8,6 +8,8 @@ COPY ./tools/script.sh /
 
 RUN chmod +x script.sh
 
+ARG DB_NAME DB_USER DB_PASS DB_ROOT_PASS
+
 RUN ./script.sh
 
 CMD ["mysqld"]

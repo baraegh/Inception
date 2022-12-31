@@ -2,34 +2,53 @@ version: '3'
 
 services:
   mariadb:
-    build: ${PWD}/requirements/mariadb/
+    image: mariadb
     container_name: mariadb
+    build:
+      context: ${PWD}/srcs/requirements/mariadb/
+      args:
+        - DB_NAME=mariadb
+        - DB_USER=barae
+        - DB_PASS=1234
+        - DB_ROOT_PASS=1234
     volumes:
       - mariadb:/var/lib/mysql
     networks:
       - the-net
+    restart: unless-stopped
 
   wordpress:
     depends_on: 
       - mariadb
-    build: ${PWD}/requirements/wordpress/
+    image: wordpress
     container_name: wordpress
+    build:
+      context: ${PWD}/srcs/requirements/wordpress/
+      args:
+        - DB_NAME=mariadb
+        - DB_USER=barae
+        - DB_PASS=1234
+    env_file:
+      - .env
     volumes:
       - wordpress:/var/www/html/wordpress
     networks:
       - the-net
+    restart: unless-stopped
 
   nginx:
     depends_on:
       - wordpress
-    build: ${PWD}/requirements/nginx/
+    image: nginx
     container_name: nginx
+    build: ${PWD}/srcs/requirements/nginx/
     ports:
       - 443:443
     volumes:
       - wordpress:/var/www/html/wordpress
     networks:
       - the-net
+    restart: unless-stopped
 
 volumes:
   mariadb:
@@ -37,14 +56,14 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: ${PWD}/data/db
+      device: ${PWD}/srcs/data/db
   
   wordpress:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: ${PWD}/data/wp
+      device: ${PWD}/srcs/data/wp
 
 networks:
   the-net:

@@ -17,9 +17,20 @@ services:
       - the-net
     restart: unless-stopped
 
+  redis:
+    image: redis
+    container_name: redis
+    build: ${PWD}/srcs/requirements/bonus/redis/
+    # ports:
+    #   - "6379:6379"
+    networks:
+      - the-net
+    restart: unless-stopped
+
   wordpress:
     depends_on: 
       - mariadb
+      - redis
     image: wordpress
     container_name: wordpress
     build:
@@ -61,8 +72,8 @@ volumes:
   wordpress:
     driver: local
     driver_opts:
-      type: none
       o: bind
+      type: none
       device: ${PWD}/srcs/data/wp
 
 networks:

@@ -29,3 +29,5 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [PID 1 and the best practices for writing Dockerfiles](https://www.padok.fr/en/blog/docker-processes-container)
 - [Introduction to Redis](https://severalnines.com/blog/introduction-redis-what-it-what-are-use-cases-etc/)
 - [Configure Redis Caching to Speed Up WordPress](https://www.digitalocean.com/community/tutorials/how-to-configure-redis-caching-to-speed-up-wordpress-on-ubuntu-14-04)
+- [set up adminer with nginx](https://www.digitalocean.com/community/questions/how-to-install-adminer-on-a-nginx-server-running-ubuntu-os-on-it)
+- [ FTP Server Setup (vsftpd)](https://www.youtube.com/watch?v=TyqwwAzwLuM)

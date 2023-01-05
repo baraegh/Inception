@@ -21,8 +21,6 @@ services:
     image: redis
     container_name: redis
     build: ${PWD}/srcs/requirements/bonus/redis/
-    # ports:
-    #   - "6379:6379"
     networks:
       - the-net
     restart: unless-stopped
@@ -30,7 +28,6 @@ services:
   wordpress:
     depends_on: 
       - mariadb
-      - redis
     image: wordpress
     container_name: wordpress
     build:
@@ -59,6 +56,38 @@ services:
       - wordpress:/var/www/html/wordpress
     networks:
       - the-net
+    restart: unless-stopped
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    build: ${PWD}/srcs/requirements/bonus/adminer
+    networks:
+      - the-net
+    restart: unless-stopped
+
+  static_page:
+    image: static_page
+    container_name: static_page
+    build: ${PWD}/srcs/requirements/bonus/static_page
+    networks:
+      - the-net
+    restart: unless-stopped
+
+  ftp:
+    image: ftp
+    container_name: ftp
+    build: ${PWD}/srcs/requirements/bonus/ftp
+    environment:
+      - FTP_USER=ftpu
+      - FTP_PASS=1234
+    ports:
+      - "21:21"
+      - 21100-21110:21100-21110
+    networks:
+      - the-net
+    volumes:
+      - wordpress:/var/www/html/wordpress
     restart: unless-stopped
 
 volumes:

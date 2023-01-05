@@ -20,4 +20,12 @@ server {
         include snippets/fastcgi-php.conf;
         fastcgi_pass wordpress:9000;
     }
+
+    location /adminer/ {
+        proxy_pass http://adminer:8080;
+    }
+
+    location /static_page/ {
+        proxy_pass http://static_page:8080;
+    }
 }

@@ -12,7 +12,9 @@ RUN mv wp-cli.phar /usr/local/bin/wp
 
 WORKDIR /var/www/html/wordpress/
 
-RUN chown -R www-data:www-data /var/www/html/wordpress
+RUN chmod 777 /var/www/html/wordpress/
+
+RUN chown -R www-data:1000 /var/www/html/wordpress
 
 RUN wp core download --allow-root
 

@@ -1,17 +1,23 @@
-SRCS = ./srcs/docker-compose.yml
+SRCS = srcs/docker-compose.yml
 
 all : build up
 
-up : ${SRCS} build
-	@sudo chown -R www-data:${USER} srcs/data/wp
-	@docker-compose -f srcs/docker-compose.yml up
+up : ${SRCS}
+	@docker-compose -f ${SRCS} up
 
 build : ${SRCS}
-	@mkdir -p srcs/data/wp srcs/data/db
-	@docker-compose -f srcs/docker-compose.yml build
+	@mkdir -p srcs/data srcs/data/wp srcs/data/db
+	@docker-compose -f ${SRCS} build
 
 down :
-	@docker-compose -f srcs/docker-compose.yml down
+	@docker-compose -f ${SRCS} down
 
 clean :
 	@docker system prune -af
+
+fclean: clean
+	@docker image prune -af
+
+re: fclean build up
+
+.PHONY: all up build down clean fclean

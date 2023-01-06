@@ -89,6 +89,18 @@ services:
     volumes:
       - wordpress:/var/www/html/wordpress
     restart: unless-stopped
+  
+  portainer:
+    image: portainer
+    container_name: portainer
+    build: ${PWD}/srcs/requirements/bonus/portainer
+    ports:
+      - 8000:8000
+      - 9443:9443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer:/data
+    restart: unless-stopped
 
 volumes:
   mariadb:
@@ -104,6 +116,13 @@ volumes:
       o: bind
       type: none
       device: ${PWD}/srcs/data/wp
+
+  portainer:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ${PWD}/srcs/data/pr
 
 networks:
   the-net:

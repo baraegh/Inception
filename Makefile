@@ -6,7 +6,7 @@ up : ${SRCS}
 	@docker-compose -f ${SRCS} up
 
 build : ${SRCS}
-	@mkdir -p srcs/data srcs/data/wp srcs/data/db
+	@mkdir -p srcs/data srcs/data/wp srcs/data/db srcs/data/pr
 	@docker-compose -f ${SRCS} build
 
 down :

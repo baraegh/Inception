@@ -26,8 +26,6 @@ COPY ./tools/script.sh .
 
 RUN chmod +x script.sh
 
-ENV WP_URL WP_TITLE WP_ADMIN_USER WP_ADMIN_PASS WP_ADMIN_EMAIL WP_USER WP_USER_EMAIL WP_USER_PASS
-
 ENTRYPOINT [ "./script.sh" ]
 
 CMD [ "php-fpm7.3", "-F", "-R" ]

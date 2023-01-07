@@ -11,8 +11,6 @@ RUN mkdir -p /var/run/vsftpd/empty \
 
 COPY ./conf/vsftpd.conf /etc/vsftpd.conf
 
-ENV FTP_USER FTP_PASS
-
 COPY ./tools/script.sh .
 
 ENTRYPOINT ["sh", "script.sh" ]

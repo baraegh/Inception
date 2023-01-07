@@ -3,7 +3,7 @@ SRCS = srcs/docker-compose.yml
 all : build up
 
 up : ${SRCS}
-	@docker-compose -f ${SRCS} up
+	@docker-compose -f ${SRCS} up -d
 
 build : ${SRCS}
 	@mkdir -p srcs/data srcs/data/wp srcs/data/db srcs/data/pr

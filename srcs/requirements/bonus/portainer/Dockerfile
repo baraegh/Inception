@@ -11,4 +11,4 @@ RUN wget https://github.com/portainer/portainer/releases/download/2.15.1/portain
 
 WORKDIR /etc/portainer
 
-CMD [ "./portainer", "--admin-password", "${PASS}" ]
+CMD [ "./portainer"]

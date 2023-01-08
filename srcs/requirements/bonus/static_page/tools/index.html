@@ -2,61 +2,143 @@
 <html>
     <header>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <title>static page</title>
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+            integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+            rel="stylesheet">
     </header>
     <body>
-
-        <!-- headear -->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">barae</a>
-                <div class="nav_menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav_item">
-                            <a href="#home" class="nav__link">
-                                <i class="uil uil-estate">Home</i>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user">About</i>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt">Skills</i>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt">Services</i>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery">Portfolio</i>
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message">Contact me</i>
-                            </a>
-                        </li>
-                        <i class="uil uil-times nav__close" id="nav-close"></i>
-                    </ul>
-
-                    <div class="nav__btns">
-                        <div class="nav__toggle" id="nav-toggle">
-                            <i class="uil uil-apps"></i>
-                        </div>
-                    </div>
-                </div>
+        <header>
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <button class="nav-toggle" aria-label="=toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"> <a href="#Home" class="nav__link">Home</a></li>
+                    <li class="nav__item"> <a href="#Services" class="nav__link">My services</a></li>
+                    <li class="nav__item"> <a href="#About" class="nav__link">About me</a></li>
+                    <li class="nav__item"> <a href="#" class="nav__link">My work</a></li>
+                </ul>
             </nav>
         </header>
 
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong class="strong">barae El-ghannouchi</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">1337 STUDENT</p>
+            <img src="img/barae.png" alt="" class="intro__img">
+        </section>
 
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--srvices">What i do</h2>
+                <div class="services">
+                   <div class="service">
+                        <h3>Development</h3>
+                        <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                            bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                            bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                            bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
+                   </div>
+                </div>
+
+                <div class="services">
+                    <div class="service">
+                        <h3>Back-end</h3>
+                        <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
+                    </div>
+                 </div>
+
+                 <div class="services">
+                    <div class="service">
+                        <h3>Front-end</h3>
+                        <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
+                    </div>
+                 </div>
+            </h2>
+            <a href="#work" class="btn">My work</a>
+        </section>
+        
+        <section class="about-me" id="about">
+            <h2 class="section__title sction__title--about">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about"> 1337 student</p>
+
+            <div class="about-me__body">
+                <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
+            </div>
+
+            <img src="img/barae02.png" alt="">
+        </section>
+
+        <section class="my-work" id="work">
+            <h2 class="section__title">My work</h2>
+            <p class="section__subtitle"></p>
+            
+            <div class="portfolio">
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                </a>
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-02.png" alt="" class="portfolio_img">
+                </a>
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-03.png" alt="" class="portfolio_img">
+                </a>
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                </a>
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                </a>
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-02.png" alt="" class="portfolio_img">
+                </a>
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-03.png" alt="" class="portfolio_img">
+                </a>
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <a href="mailto:barae.gh@gmail.com" class="footer-link">barae.gh@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+            </ul>
+        </footer>
         <script src="js/main.js"></script>
     </body>
 </html>

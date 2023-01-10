@@ -26,6 +26,6 @@ server {
     }
 
     location /static_page/ {
-        proxy_pass http://static_page:8080;
+        proxy_pass http://static_page:8080/;
     }
 }

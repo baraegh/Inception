@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <title>static page</title>
-        <link rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-            integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
             rel="stylesheet">
-    </header>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    </head>
     <body>
-        <header>
-            <div class="logo">
-                <img src="img/logo.png" alt="">
-            </div>
-            <button class="nav-toggle" aria-label="=toggle navigation">
-                <span class="hamburger"></span>
-            </button>
+
+        <header class="header">
+            <div></div>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"> <a href="#Home" class="nav__link">Home</a></li>
-                    <li class="nav__item"> <a href="#Services" class="nav__link">My services</a></li>
-                    <li class="nav__item"> <a href="#About" class="nav__link">About me</a></li>
-                    <li class="nav__item"> <a href="#" class="nav__link">My work</a></li>
+                    <li class="nav__item"> <a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"> <a href="#services" class="nav__link">My services</a></li>
+                    <li class="nav__item"> <a href="#work" class="nav__link">My work</a></li>
+                    <li class="nav__item"> <a href="#about" class="nav__link">About me</a></li>
                 </ul>
             </nav>
         </header>
@@ -41,42 +34,39 @@
         </section>
 
         <section class="my-services" id="services">
-            <h2 class="section__title section__title--srvices">What i do</h2>
-                <div class="services">
-                   <div class="service">
-                        <h3>Development</h3>
-                        <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                            bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                            bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                            bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
-                   </div>
+            <h2 class="section__title section__title--services">What i do</h2>
+            
+            <div class="services">
+                <div class="service">
+                    <h3>Development</h3>
+                    <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
                 </div>
 
-                <div class="services">
-                    <div class="service">
-                        <h3>Back-end</h3>
-                        <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
-                    </div>
-                 </div>
+                <div class="service">
+                    <h3>Back-end</h3>
+                    <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
+                </div>
 
-                 <div class="services">
-                    <div class="service">
-                        <h3>Front-end</h3>
-                        <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
-                        bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
-                    </div>
-                 </div>
+                <div class="service">
+                    <h3>Front-end</h3>
+                    <p>bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla
+                    bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
+                </div>
+            </div>
             </h2>
             <a href="#work" class="btn">My work</a>
         </section>
         
         <section class="about-me" id="about">
-            <h2 class="section__title sction__title--about">Who I am</h2>
+            <h2 class="section__title section__title--about">Who I am</h2>
             <p class="section__subtitle section__subtitle--about"> 1337 student</p>
 
             <div class="about-me__body">
@@ -88,57 +78,74 @@
                     bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla.</p>
             </div>
 
-            <img src="img/barae02.png" alt="">
+            <img src="img/barae02.png" alt="" class="about-me__img">
         </section>
 
         <section class="my-work" id="work">
             <h2 class="section__title">My work</h2>
-            <p class="section__subtitle"></p>
+            <p class="section__subtitle">A selection of my range of my work</p>
             
             <div class="portfolio">
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-02.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-02.png" alt="" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-03.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-03.png" alt="" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-02.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-02.png" alt="" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-03.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-03.png" alt="" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-01.png" alt="" class="portfolio_img">
+                    <img src="img/portfolio-01.png" alt="" class="portfolio__img">
                 </a>
             </div>
         </section>
 
-        <footer>
-            <a href="mailto:barae.gh@gmail.com" class="footer-link">barae.gh@gmail.com</a>
+        <footer class="footer">
+            <a href="mailto:barae.gh@gmail.com" class="footer__link">barae.gh@gmail.com</a>
             <ul class="social-list">
-                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
-                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
-                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
-                <li class="social-list__item"><a href="#" class="social-list__link"></a></li>
+                <li class="social-list__item">
+                    <a href="https://github.com/baraegh" class="social-list__link">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://www.linkedin.com/in/baraegh/" class="social-list__link">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </li>
+                
+                <li class="social-list__item">
+                    <a href="#" class="social-list__link">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                
+                <li class="social-list__item">
+                    <a href="#" class="social-list__link">
+                        <i class="bi bi-discord"></i>
+                    </a>
+                </li>
             </ul>
         </footer>
-        <script src="js/main.js"></script>
     </body>
 </html>

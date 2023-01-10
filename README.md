@@ -12,7 +12,6 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [Docker Networking Crash Course](https://www.youtube.com/watch?v=OU6xOM0SE4o)
 - [Docker networking II](https://www.youtube.com/watch?v=bKFMS5C4CG0&t=1073s)
 - [docker volumes](https://docs.docker.com/storage/volumes/)
-- [The NGINX Crash Course](https://www.youtube.com/watch?v=OU6xOM0SE4o)
 - [What is Nginx? Understanding the basics of Nginx](https://medium.com/devopscurry/what-is-nginx-understanding-the-basics-of-nginx-in-2021-f8ee0f3d3d54)
 - [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 - [What is a Proxy Server and How Does it Work?](https://www.varonis.com/blog/what-is-a-proxy-server)

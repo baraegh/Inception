@@ -1,7 +1,31 @@
 # Inception
 Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, MariaDB and PHP) using Docker / Docker-Compose under specific rules.
 
+## Mandatory part
+You then have to set up:
+- A Docker container that contains NGINX with TLSv1.2 or TLSv1.3 only.
+- A Docker container that contains WordPress + php-fpm (it must be installed and
+configured) only without nginx.
+- A Docker container that contains MariaDB only without nginx.
+- A volume that contains your WordPress database.
+- A second volume that contains your WordPress website files.
+- A docker-network that establishes the connection between your containers.
+
+Your containers have to restart in case of a crash.
+
 <img width="697" alt="Screen Shot 2022-12-13 at 2 51 07 AM" src="https://user-images.githubusercontent.com/46541419/207206454-724fbb86-7285-4893-b70c-537f37d81d71.png">
+
+## Bonus part
+For this project, the bonus part is aimed to be simple.
+A Dockerfile must be written for each extra service. Thus, each one of them will run
+inside its own container and will have, if necessary, its dedicated volume.
+
+Bonus list:
+  - Set up redis cache for your WordPress website in order to properly manage the cache.
+  - Set up a FTP server container pointing to the volume of your WordPress website.
+  - Create a simple static website in the language of your choice except PHP (Yes, PHP is excluded!). For example, a showcase site or a site for presenting your resume.
+  - Set up Adminer.
+  - Set up a service of your choice that you think is useful. During the defense, you will have to justify your choice (I chose Portainer)
 
 ## ressources
 - [Docker docs](https://docs.docker.com/desktop/)
@@ -29,5 +53,8 @@ Set up a small infrastructure composed of WordPress with LEMP Stack (Nginx, Mari
 - [PID 1 and the best practices for writing Dockerfiles](https://www.padok.fr/en/blog/docker-processes-container)
 - [Introduction to Redis](https://severalnines.com/blog/introduction-redis-what-it-what-are-use-cases-etc/)
 - [Configure Redis Caching to Speed Up WordPress](https://www.digitalocean.com/community/tutorials/how-to-configure-redis-caching-to-speed-up-wordpress-on-ubuntu-14-04)
-- [set up adminer with nginx](https://www.digitalocean.com/community/questions/how-to-install-adminer-on-a-nginx-server-running-ubuntu-os-on-it)
 - [ FTP Server Setup (vsftpd)](https://www.youtube.com/watch?v=TyqwwAzwLuM)
+- [ Build and deploy a portfolio website ](https://www.youtube.com/watch?v=_xkSvufmjEs)
+- [ Set up adminer with nginx ](https://www.digitalocean.com/community/questions/how-to-install-adminer-on-a-nginx-server-running-ubuntu-os-on-it)
+- [ Portainer ](https://docs.portainer.io/)
+
